@@ -7,8 +7,11 @@
 
 # Add current user to wheel group
 sudo dseditgroup -o edit -a $(whoami) -t user wheel &&
+
+# Fix Homebrew permissions
 sudo chown -R $(whoami):wheel /usr/local/Homebrew && 
 sudo chown -R $(whoami) /usr/local/Cellar &&
+sudo chown -R $(whoami) /usr/local/var/homebrew &&
 
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &&
