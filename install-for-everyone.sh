@@ -6,7 +6,9 @@
 #xcode-select --install
 
 # Add current user to wheel group
-sudo dseditgroup -o edit -a `whoami` -t user wheel &&
+sudo dseditgroup -o edit -a $(whoami) -t user wheel &&
+sudo chown -R $(whoami):wheel /usr/local/Homebrew && 
+sudo chown -R $(whoami) /usr/local/Cellar &&
 
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &&
