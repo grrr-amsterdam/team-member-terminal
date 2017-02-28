@@ -5,6 +5,9 @@
 # Install Xcode command line tools
 #xcode-select --install
 
+# Add current user to wheel group
+sudo dseditgroup -o edit -a `whoami` -t user wheel &&
+
 # Install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &&
 
