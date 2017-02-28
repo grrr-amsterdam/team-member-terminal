@@ -44,7 +44,7 @@ brew cask install skype &&
 brew cask install slack &&
 brew cask install harvest &&
 brew cask install caffeine &&
-#brew cask install bittorrent-sync # is nu Resilio, naam checken
+brew cask install resilio-sync &&
 brew cask install google-chrome &&
 
 brew linkapps &&
